@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root{
+	--blue:#273c75;
+	--pink:#FC427B;
+	--green:#45a049;
+	--grey: #f2f2f2;
+}
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' id='svg' viewBox='0 0 1440 690' xmlns='http://www.w3.org/2000/svg' class='transition duration-300 ease-in-out delay-150'%3E%3Cpath d='M 0 700 C 0 700 0 350 0 350 C 112.32142857142858 352.2857142857143 224.64285714285717 354.57142857142856 330 353 C 435.35714285714283 351.42857142857144 533.75 345.99999999999994 665 325 C 796.25 304.00000000000006 960.3571428571429 267.42857142857144 1095 269 C 1229.642857142857 270.57142857142856 1334.8214285714284 310.2857142857143 1440 350 C 1440 350 1440 700 1440 700 Z' stroke='none' stroke-width='0' fill='%23273c75' fill-opacity='1' class='transition-all duration-300 ease-in-out delay-150 path-0' transform='rotate(-180 720 350)'%3E%3C/path%3E%3C/svg%3E");
+	background-position: center;
+	background-size: 100%;
+}
+.header{
+	padding: 10px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0));
+}
+.header img{
+	height: 60px;
+	width: 61px;
+	border-radius: 50%;
+}
+.header .college-name{
+	text-align: center;
+	color: white;
+}
+.header .college-name h2{
+	font-weight: 600;
+	letter-spacing: 4px;
+	text-shadow: 3px 2px 8px black;
+}
+.header .contact-btn{
+	border: none;
+	color: black;
+	background-color: #d1d8e0;
+	border-radius: 4px;
+	padding: 5px;
+}
+.content{
+	padding: 20px;
+}
+.login-details{
+	margin: auto;
+	width: 25%;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 8px grey;
+	border-radius: 6px;
+}
+.login-details  img{
+	height: 130px;
+	width: 130px;
+	display: block;
+	margin: 0 auto 25px auto;
+}
+.login-details .form{
+	width: 95%;
+	margin: auto;
+}
+.mail-field,.password-field{
+	display: inline-flex;
+	margin-bottom: 13px;
+	width: 100%;
+}
+.mail-field i, .password-field i{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	text-align: center;
+	width: 25px;
+	color: var(--pink);
+	font-size: 17px;
+	padding: 0 5px 0 0;
+}
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 0px 10px;
+  display: inline-block;
+  border: none;
+  font-size: 13px;
+  border-bottom: 1px solid var(--grey);
+  background-color: transparent;
+}
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--pink);
+}
+input[type=submit] {
+  width: 100%;
+  background-color: var(--pink);
+  color: white;
+  padding: 8px 20px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+input[type=submit]:hover {
+  background-color: var(--green);
+}
+.content a{
+	text-decoration: none;
+}
+
+.content a p{
+	text-align: center;
+	color: black;
+	opacity: 0.8;
+	font-size: 13px;
+	margin: 12px;
+}
+/* FOR MOBILE VIEW */
+@media screen and (max-width:700px){
+	.wrapper{
+		background:transparent;
+		position: relative;
+	}
+	.header{
+		padding: 15px 22px;
+		justify-content: space-between;
+		background-color:var(--blue);
+	}
+	.header img{
+		height: 55px;
+		width: 56px;
+	}
+	.header .college-name p{
+		text-align: left;
+	}
+	.header .college-name h2{
+		letter-spacing: 2px;
+		font-weight: 500;
+		font-size: 21px;
+	}
+	.header .contact-btn{
+		display: none;
+	}
+	.content{
+		padding:75px 15px;
+	}
+	.content .login-details{
+		width: 75%;
+	}
+}

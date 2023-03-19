@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin - AVVMSPC</title>
+	<link rel="stylesheet" type="text/css" href="css\style65.css">
+	<link rel="icon" type="images/x-icon" href="logo.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/scriptForPM.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="side-menu"> 
+		<img src="images/logo.jpg">
+		<div>
+			<a href=""><li><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</li></a>
+			<a href=""><li class="active"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Professors</li></a>
+			<a href=""><li><i class="fa fa-users" aria-hidden="true"></i>Students</li></a>
+		</div>
+	</div>
+
+	<div class="view">
+		<div class="add-professor">
+			<input class="input-field" id="name" type="text" name="" placeholder="Name">
+			<input class="input-field" id="department" type="text" name="" placeholder="Department">
+			<input class="input-field" id="email" type="email" name="" placeholder="Email">
+			<button onclick="add()"><i class="fa fa-user-plus"></i>Add Professor</button>
+		</div>
+		<div class="table"> 
+			<div class="title">
+				<div class="professor bold">
+					<p class="name">NAME</p>
+					<p class="department">DEPARTMENT</p>
+					<p class="email">MAIL ADDRESS</p>
+				</div>
+			</div>
+			<div id="professors">
+				<!-- <div class="professor">
+					<p id="dname"></p>
+					<p id="ddepartment"></p>
+					<p id="demail"></p>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

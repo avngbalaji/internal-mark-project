@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	--violet:#9b59b6;
+}
+
+.wrapper{
+	height: 100vh;
+	display: flex;
+	position: relative;
+}
+/*-----SIDEBAR------*/
+.side-menu{
+	background-color: #273c75;
+	height: 100%;
+	width: 23%;
+}
+.side-menu div{
+	padding-top:25px;
+}
+.side-menu img{
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+.side-menu a{
+	text-decoration: none;
+}
+.side-menu a li{
+	color: white;
+	text-decoration: none;
+	list-style-type: none;
+	padding:5px 20px;
+	margin:15px 0;
+}
+.side-menu a .active{
+	border-left: 4px solid yellow;
+	background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0))
+}
+.side-menu a li:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.side-menu a li i{
+	padding: 10px;
+	font-size: 23px;
+}
+/*------CONTENT------*/
+.view{
+	display: flex;
+	width: 77%;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+}
+.view .count-box{
+	height:150px;
+	width:300px;
+	box-shadow: 0 0 5px black;
+	border-radius: 6px;
+	margin: 20px;
+	position: relative;
+	
+}
+.count-box i{
+	position: absolute;
+	left: 10%;
+	top:20%;
+	color: white;
+	font-size: 75px;
+	background: black; 
+}
+#teachers-count i{
+	border-radius: 50%;
+	background-color: transparent;
+	color: var(--violet);
+	transition: transform 0.3s;
+}
+#students-count i{
+	color: #16a085;
+	background-color: transparent;
+	transition: transform 0.3s;
+}
+.count-box h1{	
+	position: absolute;
+	right: 35%;
+	top: 22%;
+	transition: transform 0.3s;
+}
+p{
+	position: absolute;
+	right: 30%;
+	bottom: 23%;
+	opacity: 0.7;
+	transition: transform 0.3s;
+}
+.count-box:hover i, .count-box:hover h1, .count-box:hover p{
+	transform: scale(1.2);
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	--violet:#9b59b6;
+}
+
+.wrapper{
+	height: 100vh;
+	display: flex;
+	position: relative;
+}
+
+/*-----SIDEBAR------*/
+.side-menu{
+	background-color: #273c75;
+	height: 100%;
+	width: 23%;
+	padding-top: 25px;
+}
+.side-menu img{
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+.side-menu a{
+	text-decoration: none;
+}
+.side-menu a li{
+	color: white;
+	text-decoration: none;
+	list-style-type: none;
+	padding:5px 20px;
+	margin:15px 0;
+}
+.side-menu a .active{
+	border-left: 4px solid yellow;
+	background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0))
+}
+.side-menu a li:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.side-menu a li i{
+	padding: 10px;
+	font-size: 23px;
+}
+/*view*/
+.view{
+	width: 77%;
+}
+.view .add-professor{
+	padding: 15px 15px;
+	box-shadow: 0 0 3px black;
+	background-color: #f2f2f2;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.view .add-professor input{
+	border-radius: 3px;
+	border: 1px solid black;
+	outline: none;
+	padding: 0 10px;
+}
+.view .add-professor input:focus{
+    outline: none;
+}
+.view .add-professor button{
+	color: white;
+	border: none;
+	background-color: #4cd137;
+	padding: 3px 8px;
+	border-radius: 3px;
+	box-shadow: 0 0 3px black;
+	text-shadow: 2px 1px 1px black;
+}
+.view .add-professor button i{
+	padding-right:3px;
+}
+.view .add-professor button:hover{
+	background-color: black;
+}
+.table{
+	width: 95%;
+	margin:20px auto;
+}
+.bold{
+	font-weight: 600;
+	font-size: 19px;
+	display: flex;
+}
+.professor{
+	background-color: #273C75;
+	color: white;
+	border-radius: 3px;
+	width: 100%;
+	min-height: 40px;
+	font-size: 15px;
+	margin: 3px auto;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}

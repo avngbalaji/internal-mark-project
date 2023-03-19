@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	--blue:#273c75;
+	--pink:#FC427B;
+	--green:#45a049;
+}
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' id='svg' viewBox='0 0 1440 690' xmlns='http://www.w3.org/2000/svg' class='transition duration-300 ease-in-out delay-150'%3E%3Cpath d='M 0 700 C 0 700 0 350 0 350 C 112.32142857142858 352.2857142857143 224.64285714285717 354.57142857142856 330 353 C 435.35714285714283 351.42857142857144 533.75 345.99999999999994 665 325 C 796.25 304.00000000000006 960.3571428571429 267.42857142857144 1095 269 C 1229.642857142857 270.57142857142856 1334.8214285714284 310.2857142857143 1440 350 C 1440 350 1440 700 1440 700 Z' stroke='none' stroke-width='0' fill='%23273c75' fill-opacity='1' class='transition-all duration-300 ease-in-out delay-150 path-0' transform='rotate(-180 720 350)'%3E%3C/path%3E%3C/svg%3E");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+/* HEADER STYLE */
+.header{
+	padding: 13px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0));
+}
+.header img{
+	height: 60px;
+	width: 61px;
+	border-radius: 50%;
+}
+.header .college-name{
+	text-align: center;
+	color: white;
+}
+.header .college-name h2{
+	font-weight: 600;
+	letter-spacing: 4px;
+	text-shadow: 3px 2px 8px black;
+}
+.header .admin{
+	position: relative;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.header .admin a i{
+	cursor: pointer;
+	color: white;
+	background-color:#e056fd;
+	border-radius: 50%;
+	text-align: center;
+	width: 43px;
+	height: 41px;
+	line-height: 41px;
+	font-size: 26px;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	z-index: 1;
+	font-size: 10px;
+	padding: 2px 4px;
+	border: 0.5px solid black;
+	border-radius: 3px;
+	font-weight: 500;
+	margin: 3px;
+}
+.header .admin:hover{
+	transform: scale(1.2);
+}
+.header .admin:hover .dropdown-content {
+  display: block;
+}
+
+/* CONTENT STYLE */
+.content{
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.content .card{
+	height: 270px;
+	width:225px;
+	background-color: white;
+	box-shadow: 0 0 8px grey;
+	border-radius: 7px;
+    padding: 15px;
+    margin: 0 50px;
+    position: relative;
+    transition: transform 0.3s;
+}
+.content .card:hover{
+	transform: scale(1.1);
+}
+
+.content .card img{
+	height: 125px;
+	width: 125px;
+	border-radius: 50%;
+	display: block;
+	margin:auto;
+}
+.card p{
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-shadow: 1px 1.5px 1px grey;
+	font-weight: 500;
+}
+#admin-card{
+	display: none;
+}
+.content #admin-card div{
+	margin:auto;
+	width: 125px;
+}
+.login-btn{
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	background-color: #0984e3;
+	color: white;
+	border-radius: 3px;
+	padding: 7px 10px;
+    position: absolute;
+    bottom: 40px;
+    left: 85px;
+}
+/* FOOTER STYLE */
+.footer{
+	text-align: center;
+	padding: 30px;
+	font-size: 13px;
+	opacity: 0.9;
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3));
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+}
+
+/* FOR MOBILE VIEW */
+@media screen and (max-width:700px){
+	.wrapper{
+		background:transparent;
+	}
+	.header{
+		padding: 15px 22px;
+		justify-content: space-between;
+		background-color: var(--blue);
+	}
+	.header img{
+		height: 55px;
+		width: 56px;
+	}
+	.header .college-name p{
+		text-align: left;
+	}
+	.header .college-name h2{
+		letter-spacing: 2px;
+		font-weight: 500;
+		font-size: 21px;
+	}
+	.header .admin{
+		display: none;
+	}
+	.content{
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 25px 0;
+	}
+	.content #admin-card{
+		display: block;
+	}
+	.content .card{
+		height: 130px;
+		width: 290px;
+		margin: 20px 0;
+		box-shadow: 0 0 4px grey;
+		padding: 0;
+		position: relative;
+	}
+	.content .card img{
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		left: 10%;
+		top:10%;
+	}
+
+	.content #admin-card p, .content #student-card p{
+		position: absolute;
+		right: 17%;
+		top:12%;
+	}
+	.content #professor-card p{
+		position: absolute;
+		right: 11%;
+		top:12%;
+	}
+	.content .card a .login-btn{
+		position: absolute;
+		left: 55%;
+		bottom:26%;
+		padding: 4px 20px;
+	}
+}
